@@ -5,13 +5,6 @@ This sample was created with Unity 2018.4
 
 This sample demonstrates reading and writing from/to leaderboards from within a Unity title. The sample covers lowest score/best time, high score and cumulative score leaderboards.
 
-### Building the Sample
-
-**Build Requirements**
-
-* Unity 2018.3 or later
-* Visual Studio 2017 (15.7 update) or later
-
 **PlayFab Configuration**
 
 * Create the 'best_time' leaderboard
