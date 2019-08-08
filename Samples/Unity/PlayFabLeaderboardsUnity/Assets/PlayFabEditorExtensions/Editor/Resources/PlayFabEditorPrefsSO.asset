@@ -17,7 +17,7 @@ MonoBehaviour:
   SelectedStudio: Niclas Gleesborg
   SdkPath: Assets/PlayFabSdk
   EdExPath: 
-  LocalCloudScriptPath: C:/Users/Niclas/Documents/PlayFab-Samples/Samples/Unity/PlayFabLeaderboardsUnity/Assets/PlayFabEditorExtensions/Editor/Resources/.CloudScript.js
+  LocalCloudScriptPath: 
   PanelIsShown: 0
   curMainMenuIdx: 4
   curSubMenuIdx: 0
