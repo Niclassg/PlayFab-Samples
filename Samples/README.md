@@ -1,6 +1,5 @@
 # PlayFab Samples
-This is the root of the samples tree.
 
-## Directory structure
+The samples are forked from [PlayFab/PlayFab-Samples](https://github.com/PlayFab/PlayFab-Samples).
 
-Within the samples directory there are sub-directories for platform and engine-specific samples.
+They are used as a basis for tutorial videos on [Youtube](https://www.youtube.com/channel/UC-bNkJnkLW-_DCMU4puN6aw).
