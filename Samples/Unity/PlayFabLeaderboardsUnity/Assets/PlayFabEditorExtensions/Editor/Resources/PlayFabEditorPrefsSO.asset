@@ -4,19 +4,20 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d0199c11aa6f514784c5c69cd8378d8, type: 3}
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
-  DevAccountEmail: 
-  DevAccountToken: 
-  SelectedStudio: 
-  SdkPath: 
+  DevAccountEmail: niclas.gleesborg@gmail.com
+  DevAccountToken: ji8ou4ouriygdsus5tkzhut7zo8fm4g7ttwdfuna6gxad5pmomr14esmopqyoswqz387wg3esqabdczp5wdstukgzncrhr1cti37c61s9yxfrroajs8u6h5im9khg79dzgujfhozdrarxsxj9mj7uzmxa8wfryjdnaa3e6usiy1mbzdqwy6p551o1jwkbhnqangux6tp
+  SelectedStudio: Niclas Gleesborg
+  SdkPath: Assets/PlayFabSdk
   EdExPath: 
-  LocalCloudScriptPath: 
+  LocalCloudScriptPath: C:/Users/Niclas/Documents/PlayFab-Samples/Samples/Unity/PlayFabLeaderboardsUnity/Assets/PlayFabEditorExtensions/Editor/Resources/.CloudScript.js
   PanelIsShown: 0
-  curMainMenuIdx: 0
+  curMainMenuIdx: 4
   curSubMenuIdx: 0

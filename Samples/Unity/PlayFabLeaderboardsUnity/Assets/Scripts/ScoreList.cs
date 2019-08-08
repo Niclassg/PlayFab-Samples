@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayFab.ClientModels;
 using System;
+using System.Linq;
 
 public class ScoreList : MonoBehaviour
 {
-    public GameObject EntryPrefab;
+	[SerializeField] private Entry entryPrefab;
+	[SerializeField] private Text titlePanelText;
+	[SerializeField] private Text headerPanelText;
 
     // Use this for initialization
     public void ShowLeaderboard (string boardName, string boardTitle, string valueName)
@@ -21,30 +24,31 @@ public class ScoreList : MonoBehaviour
         // Get the leaderboard data
         var leaderboards = PlayfabManager.GetLeaderboard(boardName);
 
-		if (leaderboards.Count > 0)
+		if (leaderboards.Any())
 		{
 			// Create UI entries for each
 			foreach (var leaderboard in leaderboards)
 			{
-				var entry = Instantiate(EntryPrefab);
-
-				entry.transform.SetParent(this.transform, false);
-				entry.transform.Find("Player").GetComponent<Text>().text = leaderboard.DisplayName ?? leaderboard.PlayFabId;
-				entry.transform.Find("Rank").GetComponent<Text>().text = (leaderboard.Position + 1).ToString();
-				entry.transform.Find("Value").GetComponent<Text>().text = leaderboard.StatValue.ToString();
+				var entry = Instantiate(entryPrefab, transform, false);
+				entry.Set(new EntryModel(
+					(leaderboard.Position + 1).ToString(),
+					leaderboard.DisplayName ?? leaderboard.PlayFabId,
+					leaderboard.StatValue.ToString()
+					));
 			}
 		}
 		else
 		{
-			var entry = Instantiate(EntryPrefab);
-			entry.transform.SetParent(this.transform, false);
-			entry.transform.Find("Player").GetComponent<Text>().text = "Leaderboard is empty";
-			entry.transform.Find("Rank").GetComponent<Text>().text = String.Empty;
-			entry.transform.Find("Value").GetComponent<Text>().text = String.Empty;
+			var entry = Instantiate(entryPrefab, this.transform, false);
+			entry.Set(new EntryModel(
+				"Leaderboard is empty",
+				"",
+				""
+				));
 		}
 
         // Set the label text
-        GameObject.Find("Title Panel").transform.Find("Title").GetComponent<Text>().text = boardTitle;
-        GameObject.Find("Header Panel").transform.Find("Header: Value").GetComponent<Text>().text = valueName;
+        titlePanelText.text = boardTitle;
+        headerPanelText.text = valueName;
     }
 }

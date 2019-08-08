@@ -512,7 +512,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1212,8 +1212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7be72f5543c94c90915c8ae199517bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntryPrefab: {fileID: 1004069144622772, guid: 4418c4f9bf05b4c2cb814fababd1af01,
+  entryPrefab: {fileID: 876177913722785432, guid: 4418c4f9bf05b4c2cb814fababd1af01,
     type: 3}
+  titlePanelText: {fileID: 990413971}
+  headerPanelText: {fileID: 1540466129}
 --- !u!114 &1051775871
 MonoBehaviour:
   m_ObjectHideFlags: 0
